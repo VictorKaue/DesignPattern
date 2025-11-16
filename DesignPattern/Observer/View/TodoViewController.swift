@@ -1,5 +1,5 @@
 //
-//  iViewController.swift
+//  TodoViewController.swift
 //  DesignPattern
 //
 //  Created by Victor Kaue Lima De Paiva on 07/11/25.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class iViewController: UIViewController {
-
+class TodoViewController: UIViewController {
+    var label = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        label.frame.size = CGSize(width: 100, height: 100)
     }
     
 
