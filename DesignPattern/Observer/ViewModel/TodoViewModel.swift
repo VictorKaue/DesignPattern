@@ -10,14 +10,11 @@ protocol Observer{
 }
 
 class TodoViewModel{
-    var tasks: [Task]
+    var tasks: [Task] = []
     var observers: [Observer] = []
-    
-    init(tasks: [Task]) {
-        self.tasks = tasks
-    }
     
     func addObserver(observer: Observer){
         observers.append(observer)
     }
+    
 }

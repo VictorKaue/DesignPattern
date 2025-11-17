@@ -7,12 +7,16 @@
 
 import UIKit
 
-class TodoViewController: UIViewController {
-    var label = UILabel()
+class TodoViewController: UIViewController, Observer {
+    func update(isComplete: Bool) {
+        label.text = "updated"
+    }
     
+    var label = UILabel()
+    var viewModel = TodoViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.addObserver(observer: self)
         label.frame.size = CGSize(width: 100, height: 100)
     }
     
